@@ -1,10 +1,7 @@
+from select import select
 from selenium import webdriver
 import time
-
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import select
-
-import sel
 
 driver=webdriver.Chrome()
 driver.maximize_window()
@@ -18,4 +15,12 @@ driver.find_element(By.XPATH,"//input[@name='reg_email_confirmation__']").send_k
 driver.find_element(By.XPATH,"//input[@id='password_step_input']").send_keys('Pavankalyan#$123')
 days=driver.find_element(By.XPATH,"//select[@id='day']").click()
 daydd=select(days)
-daydd.select_by_visible_text(6)
+daydd.select_by_visible_text("6")
+
+mon=driver.find_element(By.XPATH,"//select[@id='day']").click()
+daydd=select(mon)
+daydd.select_by_value("6")
+
+year=driver.find_element(By.XPATH,"//select[@id='day']").click()
+daydd=select(year)
+daydd.select_by_index("6").perform()
