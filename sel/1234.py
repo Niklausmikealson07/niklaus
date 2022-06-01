@@ -1,0 +1,22 @@
+from selenium import webdriver
+import time
+driver=webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://www.goibibo.com/flights/")
+time.sleep(3)
+driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[2]/div/div[1]/div[3]/div').click()
+time.sleep(3)
+driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[2]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div[1]/div[3]/div[2]/div[3]').click()
+time.sleep(2)
+driver.find_element_by_xpath("//span[text()='Done']").click()
+time.sleep(3)
+driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[2]/div/div[1]/div[5]/div[2]/div[3]/a[2]').click()
+time.sleep(2)
+driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[2]/div/div[1]/div[4]/div').click()
+time.sleep(2)
+driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[2]/div/div[1]/div[4]/div[2]/div[2]/div/div/div[2]/div[1]/div[3]/div[3]/div[6]').click()
+time.sleep(2)
+driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[2]/div/div[1]/div[4]/div[2]/div[3]/span[2]').click()
+time.sleep(2)
+driver.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[2]/div/div[1]/div[5]/div[2]/div[3]/a[2]').click()
+
