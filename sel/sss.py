@@ -1,0 +1,20 @@
+from selenium import webdriver
+import time
+driver=webdriver.Chrome()
+driver.maximize_window()
+driver.get('https://www.redbus.in/')
+ti=driver.title
+print(ti)
+driver.find_element_by_id('src').send_keys('Anantapur')
+time.sleep(2)
+driver.find_element_by_id('dest').send_keys('Bengaluru')
+time.sleep(2)
+driver.find_element_by_id('onward_cal').click()
+time.sleep(2)
+driver.find_element_by_xpath("//td[text()='18']").click()
+time.sleep(2)
+driver.find_element_by_xpath("//button[text()='Search Buses']").click()
+time.sleep(2)
+driver.find_element_by_class_name('fr signin-block  ').click()
+time.sleep(3)
+driver.find_element_by_xpath("//li[text()='Sign In/Sign Up']").click()
